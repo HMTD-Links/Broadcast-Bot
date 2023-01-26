@@ -30,8 +30,8 @@ Bot = Client(
 async def _(bot, cmd):
     await handle_user_status(bot, cmd)
 
-@Bot.on_message(filters.command("start") & filters.private)
-async def startprivate(client, message):
+# @Bot.on_message(filters.command("start") & filters.private)
+# async def startprivate(client, message):
     # return
     chat_id = message.from_user.id
     if not await db.is_user_exist(chat_id):
